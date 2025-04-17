@@ -1,10 +1,10 @@
 # ciberseguridadWeb
-# 💻 Proyecto Web: Ciberseguridad
+# Proyecto Web: Ciberseguridad
 
 Este es un proyecto académico desarrollado como parte de la materia de Tercera I.  
 Consiste en una página moderna y responsiva para promocionar servicios de ciberseguridad.
 
-## 🌐 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - HTML5
 - CSS3
@@ -13,17 +13,17 @@ Consiste en una página moderna y responsiva para promocionar servicios de ciber
 - Bootstrap Icons
 - Git & GitHub
 
-## 📄 Contenido obligatorio del proyecto
+##  Contenido obligatorio del proyecto
 
-- Menú responsive con ícono hamburguesa ✅  
-- Hero con CTA ✅  
-- Cards de servicios ✅  
+- Menú responsive con ícono hamburguesa  
+- Hero con CTA 
+- Cards de servicios  
 - Accordion (pendiente)  
 - Carousel (pendiente)  
-- Footer ✅  
-- Proyecto publicado en GitHub ✅  
+- Footer 
+- Proyecto publicado en GitHub  
 
-## ✨ Objetivo
+##  Objetivo
 
 Crear una página atractiva, funcional y clara que promueva servicios relacionados con la ciberseguridad, utilizando herramientas modernas y buenas prácticas de diseño.
 
