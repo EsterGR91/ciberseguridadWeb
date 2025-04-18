@@ -15,33 +15,61 @@ body *,
 .text-danger,
 .text-primary {
   color: #35ef77 !important;
+  font-family: 'Outfit', 'Segoe UI', sans-serif;
 }
 
-/* Estilo  "Cyber Clean" */
-.logo-title {
-    font-family: 'Segoe UI', 'Poppins', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: #35ef77;
-    text-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
-    letter-spacing: 1px;
-  }
-   
-  .logo-redondo {
-    width: 60px;              
-    height: 60px;
-    object-fit: cover;       
-    border-radius: 50%;      
-    border: 2px solid #35ef77; /* borde verde  */
-    box-shadow: 0 0 10px rgba(53, 239, 119, 0.4); /* glow suave */
-    transition: transform 0.3s ease;
+.navbar-brand span {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover span {
+  transform: scale(1.05);
+  color: #35ef77;
+}
+
+/* Logo con borde verde y animación */
+.logo-navbar {
+  border: 2px solid #35ef77;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(53, 239, 119, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación al pasar el mouse */
+.logo-navbar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(53, 239, 119, 0.8);
+}
+
+
+
+  
+  /* animacion menu  */
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
   }
   
-  .logo-redondo:hover {
-    transform: scale(1.05);  /* pequeño zoom al pasar */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #35ef77;
+    transition: width 0.4s ease;
   }
   
-   
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: #35ef77 !important;
+  }
+  
 
   section,
   .container,
@@ -79,7 +107,7 @@ p, .lead, .card-text, .card-title {
     color: #35ef77 !important;
   }
 
-/* Corrección de fondo primario */
+/* fondo primario */
 .bg-primary,
 .carousel .bg-primary,
 body .bg-primary {
@@ -93,9 +121,9 @@ body .bg-primary {
 
 .bg-dark {
     background-color: #0d1b2a !important;
-    border: 2px solid #35ef77 !important; /* Borde verde bonito */
-    border-radius: 1rem; /* Opcional: redondear los bordes */
-    padding: 1rem;       /* Opcional: darle espacio interno */
+    border: 2px solid #35ef77 !important; /* Borde verde  */
+    border-radius: 1rem; /*  redondear los bordes */
+    padding: 1rem;       /* darle espacio interno */
   }
   
   
@@ -226,9 +254,16 @@ body .bg-primary {
     box-shadow: none;
   }
 .accordion-body {
-  background-color: #0d1b2a !important; /* Fondo acorde al tema */
-  color: #ffffff !important;           /* Texto blanco */
+  background-color: #0d1b2a !important; /* Fondo  */
+  color:  #35ef77 !important;           /* Texto blanco */
 }
+
+.accordion-button::after {
+  color: #35ef77 !important; /* Cambia la flecha a verde */
+  filter: brightness(1.8);    /* Mejora la visibilidad */
+}
+
+
 
 .accordion-item {
   background-color: transparent !important;
@@ -236,32 +271,59 @@ body .bg-primary {
   border-bottom: 2px solid #1b263b;
   margin-bottom: 0.5rem;
 }
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2335ef77' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg); /* Gira cuando está abierto */
+}
 
   
-  .carousel-item {
-    padding: 2rem;
-  }
-  
-  .carousel-item h5 {
-    color: #35ef77;
-    font-weight: bold;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-size: 100% 100%;
-    filter: invert(1);
-  }
-  
-  .carousel-item img {
-    border: 4px solid #35ef77;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
-    transition: transform 0.3s ease;
-  }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important; 
+  background-color: #35ef77 !important; /* fondo verde */
+  color: #0d1b2a !important; /* color de la flecha */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(53, 239, 119, 0.3);
+}
+
+/* contenido de las flechas */
+.carousel-control-prev-icon::after {
+  content: "<";
+  color: #0d1b2a !important;
+}
+
+.carousel-control-next-icon::after {
+  content: ">";
+  color: #0d1b2a !important;
+}
+
+.carousel-item img {
+  border: 4px solid #35ef77; /* Borde verde ciberseguridad */
+  border-radius: 50%;        /* Foto circular */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.3); /* Sombra verde suave */
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+}
+
+
 
   footer a:hover {
     color: #35ef77;
@@ -278,6 +340,16 @@ body .bg-primary {
     transform: scale(1.2);
    
   }
-
+  .logo-footer {
+    border: 2px solid #35ef77;
+    padding: 5px;
+    box-shadow: 0 0 12px rgba(0, 255, 128, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-footer:hover {
+    transform: scale(1.1) rotate(3deg);
+  }
+  
 
   

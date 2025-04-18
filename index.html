@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyberseguridad</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
 
     <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -20,55 +22,56 @@
 
 <body>
     
-    <header class="text-center mt-3">
-  <h1 class="logo-title">Cyber Clean</h1>
-</header>
-
+ 
 <!-- NAVBAR COMPLETO CON ID PARA PLANES -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNavbar">
-    <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="assets/logo.jpg" alt="Logo" class="logo-redondo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4" id="mainNavbar">
+  <div class="container-fluid">
+    
+    <!-- Logo y Nombre -->
+    <a class="navbar-brand d-flex align-items-center me-auto" href="#">
+      <img src="assets/logo.jpg" alt="Logo" width="50" height="50" class="logo-navbar me-2">
+      <span class="fw-bold fs-4 text-success">Cyber Clean</span>
+    </a>
+    
 
-          </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-  
-          <!-- INICIO -->
-          <li class="nav-item">
-            <a class="nav-link active" href="#" id="link-inicio">Inicio</a>
-          </li>
-  
-          <!-- PLANES con submenú y click -->
-          <li class="nav-item dropdown-custom">
-            <a class="nav-link" href="#" id="link-planes">Planes</a>
-            <ul class="submenu-custom">
-              <li><a href="#" onclick="mostrarDetalle('basico'); return false;">Plan Básico</a></li>
-              <li><a href="#" onclick="mostrarDetalle('pro'); return false;">Plan Pro</a></li>
-              <li><a href="#" onclick="mostrarDetalle('empresarial'); return false;">Plan Empresarial</a></li>
-            </ul>
-          </li>
-  
-          <!-- NOSOTROS -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="link-nosotros">Nosotros</a>
-          </li>
-  
-          <!-- CONTACTO -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="link-contacto">Contacto</a>
-          </li>
-  
-        </ul>
-      </div>
+    <!-- Botón de menú para pantallas pequeñas -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- INICIO -->
+        <li class="nav-item">
+          <a class="nav-link active" href="#" id="link-inicio">Inicio</a>
+        </li>
+
+        <!-- PLANES con submenú y click -->
+        <li class="nav-item dropdown-custom">
+          <a class="nav-link" href="#" id="link-planes">Planes</a>
+          <ul class="submenu-custom">
+            <li><a href="#" onclick="mostrarDetalle('basico'); return false;">Plan Básico</a></li>
+            <li><a href="#" onclick="mostrarDetalle('pro'); return false;">Plan Pro</a></li>
+            <li><a href="#" onclick="mostrarDetalle('empresarial'); return false;">Plan Empresarial</a></li>
+          </ul>
+        </li>
+
+        <!-- NOSOTROS -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="link-nosotros">Nosotros</a>
+        </li>
+
+        <!-- CONTACTO -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="link-contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
-  
+
+  </div>
+</nav>
+
 
 <!-- HERO DINÁMICO -->
 <section id="hero-content" class="text-center py-5 bg-dark text-white">
@@ -225,7 +228,9 @@
 <!-- FOOTER -->
 <footer class="bg-dark text-white pt-5 pb-3 mt-5">
     <div class="container text-center">
-      <h5 class="mb-3 text-success">Cyberseguridad Web</h5>
+      <h5 class="mb-3 text-success">Cyber Clean
+
+      </h5>
       <p>Protegiendo tu negocio desde 2025 con soluciones efectivas y personalizadas.</p>
   
       <!-- Íconos de redes sociales -->
@@ -237,7 +242,7 @@
       </div>
   
       <!-- Info de contacto -->
-      <p class="small mb-1">Correo: ester@cyberseguridadweb.com</p>
+      <p class="small mb-1">Correo: ester@CyberseguridadWeb.com</p>
       <p class="small mb-1">Teléfono: +506 8888-8888</p>
   
       <!-- Info de autora -->
@@ -250,6 +255,12 @@
       <!-- Hora actual dinámica -->
       <p id="horaActual" class="small text-success mt-2"></p>
     </div>
+
+    <!-- Logo en el footer -->
+<div class="d-flex justify-content-center mt-3">
+  <img src="assets/logo.jpg" alt="Logo Footer" width="60" height="60" class="rounded-circle logo-footer">
+</div>
+
   </footer>
   
   
