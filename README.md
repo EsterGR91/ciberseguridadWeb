@@ -18,8 +18,8 @@ Consiste en una página moderna y responsiva para promocionar servicios de ciber
 - Menú responsive con ícono hamburguesa  
 - Hero con CTA 
 - Cards de servicios  
-- Accordion (pendiente)  
-- Carousel (pendiente)  
+- Accordion 
+- Carousel   
 - Footer 
 - Proyecto publicado en GitHub  
 
