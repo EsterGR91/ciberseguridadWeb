@@ -123,7 +123,49 @@
   
 
 
-  <button class="btn btn-success btn-cotizar" onclick="mostrarAlerta()">Solicitar Cotización</button>
+  <button class="btn btn-success btn-cotizar" data-bs-toggle="modal" data-bs-target="#formularioModal">
+    Solicitar Cotización
+  </button>
+  
+  
+<!-- MODAL DE FORMULARIO -->
+<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="formularioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white border-success reveal">
+      <div class="modal-header border-success">
+        <h5 class="modal-title text-success" id="formularioModalLabel">
+          <i class="bi bi-envelope-fill me-2"></i>Solicitá tu Cotización
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form action="https://formsubmit.co/estermari91@gmail.com" method="POST">
+          <div class="mb-3">
+            <label for="nombre" class="form-label text-success">Nombre</label>
+            <input type="text" class="form-control border-success bg-transparent text-white" id="nombre" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label text-success">Correo</label>
+            <input type="email" class="form-control border-success bg-transparent text-white" id="correo" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label text-success">Mensaje</label>
+            <textarea class="form-control border-success bg-transparent text-white" id="mensaje" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Configuración FormSubmit -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_next" value="https://estergr91.github.io/ciberseguridadWeb/gracias.html">
+
+          <button type="submit" class="btn btn-success w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 <!-- PREGUNTAS FRECUENTES / ACCORDION -->
