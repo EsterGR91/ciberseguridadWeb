@@ -69,11 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
 
-        <div class="mt-4">
-          <a href="mailto:contacto@ciberseguridadweb.com" class="btn btn-outline-info btn-lg">
-            <i class="bi bi-send-fill me-2"></i> Escribir correo
-          </a>
-        </div>
+       
       </div>
     `,
     planes: `
