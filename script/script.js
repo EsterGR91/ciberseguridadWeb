@@ -1,5 +1,9 @@
 console.log("JS cargado correctamente");
 
+function mostrarAlerta() {
+  alert("¡Gracias por tu interés! Muy pronto te contactaremos. ");
+}
+
 
 // Mostrar hora en el footer
 function mostrarHora() {
